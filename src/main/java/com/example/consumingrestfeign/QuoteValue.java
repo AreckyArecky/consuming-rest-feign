@@ -6,6 +6,6 @@ import lombok.Builder;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record QuoteValue(String quote) {
+public record QuoteValue(long id,String quote) {
 
 }

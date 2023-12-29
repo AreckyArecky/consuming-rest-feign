@@ -29,9 +29,11 @@ public class ConsumingRestFeignApplication {
        List<Quote> result2 = quoteClient.makeSearchRequestWithHeader("costam");
         log.info(result);
         log.info(result2);
+        quoteClient.addQuote(new QuoteValueBuilder("Is this gonna work?").build());
+        result2 = quoteClient.makeSearchRequestWithHeader("working???");
+        log.info(result2);
 
-
-quoteClient.deleteQuoteById("14");
+//quoteClient.deleteQuoteById("14");
 
     }
 }
